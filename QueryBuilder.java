@@ -22,11 +22,11 @@ public class QueryBuilder {
 			int i = 0 ;
 			for(Condition condition : conditionList) {
 				if(i==0) {
-					initialQuery = "select sla_definition_id from sla_definition_condition_rules where"
-							+" sla_criteria_attribute='"+condition.getAttribute()+"' and sla_criteria_value_display='"+condition.getValue()+"'";
+					initialQuery = "select definition_id from definition_condition_rules where"
+							+" criteria_attribute='"+condition.getAttribute()+"' and criteria_value_display='"+condition.getValue()+"'";
 				}else {
-					query = "select sla_definition_id from sla_definition_condition_rules where sla_definition_id in (" +initialQuery
-							+") and sla_criteria_attribute='"+condition.getAttribute()+"' and sla_criteria_value_display='"+condition.getValue()+"'";
+					query = "select definition_id from definition_condition_rules where definition_id in (" +initialQuery
+							+") and criteria_attribute='"+condition.getAttribute()+"' and criteria_value_display='"+condition.getValue()+"'";
 					initialQuery = query;
 				}
 				i++;
@@ -34,8 +34,8 @@ public class QueryBuilder {
 					query = initialQuery;
 				}
 			}
-			String slaDefinitionRecord = "select * from sla_definition_tbl where sla_definition_id in ("+query+")";
-			System.out.println("Query --->"+slaDefinitionRecord);
+			String definitionRecord = "select * from definition_tbl where definition_id in ("+query+")";
+			System.out.println("Query --->"+definitionRecord);
 		}
 	}
 }
