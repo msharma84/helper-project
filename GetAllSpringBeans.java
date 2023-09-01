@@ -12,9 +12,9 @@ public class BootApplication{
 	public static void main(String[] args) {
 		applicationContext =  SpringApplication.run(SreMonitoringToolApplication.class, args);
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();
-        for(String beanName : allBeanNames) {
-            System.out.println("Bean name ->"+beanName);
-        }
-     }
+	        for(String beanName : allBeanNames) {
+	            System.out.println("Bean name ->"+beanName);
+	        }
+    	 }
 }
 
