@@ -15,6 +15,6 @@ public class BootApplication{
         for(String beanName : allBeanNames) {
             System.out.println("Bean name ->"+beanName);
         }
-	}
+     }
 }
 
