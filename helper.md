@@ -1,5 +1,9 @@
+
 mvn archetype:generate -DgroupId=com.helper-project -DartifactId=java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 mvn dependency:tree -Dverbose
+================
+JPA - spring.jpa.properties.hibernate.show_sql=true
+JDBC Template - logging.level.org.springframework.jdbc.core=TRACE
 ================
 get java process
 jps -l -m -v
