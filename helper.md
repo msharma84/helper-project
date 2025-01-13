@@ -1,16 +1,20 @@
 # Cheat Sheet 
 
-- Generate Maven Project from CMD
+## Generate Maven Project from CMD
+```
  mvn archetype:generate -DgroupId=com.helper-project -DartifactId=java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
  mvn dependency:tree -Dverbose
+```
+## Print JDBC Logs
+```
+ JPA - spring.jpa.properties.hibernate.show_sql=true
+ JDBC Template - logging.level.org.springframework.jdbc.core=TRACE
+```
 
-- Print JDBC Logs
-JPA - spring.jpa.properties.hibernate.show_sql=true
-JDBC Template - logging.level.org.springframework.jdbc.core=TRACE
-================
-get java process
+## Get java process
+```
 jps -l -m -v
-================
+```
 Get java thread stat 
 
 jstat -gc <java thread pid> 1s <iteration>
