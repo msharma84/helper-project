@@ -15,17 +15,26 @@
 ```
 jps -l -m -v
 ```
-Get java thread stat 
 
+## Get java thread stat 
+```
 jstat -gc <java thread pid> 1s <iteration>
 jstat -gc 27489 1s 300
 jstat -gc 27489 1s 300 > threaddumps.log
-================
-These are different logging levels and its order from minimum << maximum.
+```
+
+## These are different logging levels and its order from minimum << maximum.
+```
 OFF << FATAL << ERROR << WARN << INFO << DEBUG << TRACE << ALL
-================
+```
+
+## Check all spring beans
+```
 -Dspring.liveBeansView.mbeanDomain
-================
+```
+
+## Create Backup Table
+```
 CREATE BACKUP TABLE : 
     CREATE TABLE "BLUADMIN"."DB2_TEST_DUMP" LIKE "BLUADMIN"."DB2_TEST";
 INSERT DATA INTO IT :
@@ -37,4 +46,4 @@ Options that are not copied include:
     Foreign keys
     Logged and compact option on BLOB columns
     Distinct types
-================
+```
